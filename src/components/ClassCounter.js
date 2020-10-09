@@ -9,11 +9,10 @@ class ClassCounter extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>Clickeaste {this.state.count} veces</h1>
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-          Clickeame
-        </button>
+      <div onClick={() => this.setState({ count: this.state.count + 1 })}>
+        <h1 style={{ cursor: "pointer" }}>
+          Clickeaste {this.state.count} veces
+        </h1>
       </div>
     );
   }
