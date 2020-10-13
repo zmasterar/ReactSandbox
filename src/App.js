@@ -1,16 +1,17 @@
 import React from "react";
-import ClassCounter from "./components/ClassCounter";
+import "./App.css";
+// import ClassCounter from "./components/ClassCounter";
 import FunctionalCounter from "./components/FunctionalCounter";
 import Mostrar from "./components/Mostrar";
-import Input from "./components/Input";
-import "./App.css";
+import InputName from "./components/InputName";
+import FectchExample from "./components/FecthExample";
 
 function App() {
   return (
     <>
-      <Input />
-      <ClassCounter />
+      <InputName />
       <FunctionalCounter />
+      <FectchExample />
       <Mostrar />
     </>
   );
