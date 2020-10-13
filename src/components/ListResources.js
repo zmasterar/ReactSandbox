@@ -4,11 +4,15 @@ export default function ListResources(props) {
     return <div>Loading...</div>;
   }
   return (
-    <>
-      <h1>{props.type}</h1>
+    <div>
+      <hr className="border-t-2 border-blue-800 mt-6" />
+      <h1 className="text-4xl">{props.type}</h1>
       {props.data.map((item) => (
         <ul>
-          <li key={item.id}>
+          <li
+            key={item.id}
+            className="bg-blue-200 my-6 rounded-lg shadow-lg py-6 px-4"
+          >
             {Object.keys(item).map((property, key) => (
               <ul>
                 <li key={key}>
@@ -19,6 +23,6 @@ export default function ListResources(props) {
           </li>
         </ul>
       ))}
-    </>
+    </div>
   );
 }

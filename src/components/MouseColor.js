@@ -5,9 +5,9 @@ function MouseColor() {
 
   function onMouseMove(event) {
     if (event.clientX < window.innerWidth / 2) {
-      setColor("orange");
-    } else {
       setColor("teal");
+    } else {
+      setColor("red");
     }
   }
 
@@ -23,7 +23,11 @@ function MouseColor() {
   }, []);
 
   console.log("Ocurrio el render");
-  return <div style={{ height: "200px", background: color }}></div>;
+  return (
+    <div
+      className={"rounded-lg shadow-lg h-48 mt-4 bg-" + color + "-500"}
+    ></div>
+  );
 }
 
 export default MouseColor;
