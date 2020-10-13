@@ -11,7 +11,7 @@ export default function ListResources(props) {
         <ul>
           <li
             key={item.id}
-            className="bg-blue-200 my-6 rounded-lg shadow-lg py-6 px-4"
+            className="bg-white my-6 rounded-lg shadow-lg py-6 px-4"
           >
             {Object.keys(item).map((property, key) => (
               <ul>
