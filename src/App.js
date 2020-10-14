@@ -3,6 +3,7 @@ import FunctionalCounter from "./components/FunctionalCounter";
 import Mostrar from "./components/Mostrar";
 import InputName from "./components/InputName";
 import FectchExample from "./components/FecthExample";
+import Form from "./components/Form";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <FunctionalCounter />
         <FectchExample />
         <Mostrar />
+        <Form />
       </div>
     </div>
   );
