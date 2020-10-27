@@ -11,6 +11,7 @@ const Form = () => {
   });
   const [ocupationData, setOcupationData] = useState({});
   const [showModal, setShowModal] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (event) => {
     setData({
@@ -20,11 +21,14 @@ const Form = () => {
   };
   const sendData = (event) => {
     event.preventDefault();
+    setLoading(true);
     setShowModal(true);
     setOcupationData({});
     fetch(`${url}${data.name}+${data.lastName}`)
+      //fetch(`http://db.zmaster.com.ar:3003/posts/${data.name}`)
       .then((res) => res.json())
       .then((json) => {
+        setLoading(false);
         setOcupationData(json);
       });
   };
@@ -74,6 +78,7 @@ const Form = () => {
           close={close}
           showModal={showModal}
           ocupationData={ocupationData}
+          loading={loading}
         />
       )}
     </div>

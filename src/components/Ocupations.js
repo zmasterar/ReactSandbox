@@ -7,7 +7,7 @@ const Ocupations = ({ ocupationData }) => {
 
   return (
     <ul className="pt-3">
-      <div className="text-3xl text-blue-500 pt-3">Ocupaciones </div>
+      <div className="text-3xl text-blue-500 pt-3">Ocupaciones</div>
       {ocupationTitles.map((title) => (
         <li>
           <h3 className="text-blue-500 text-2xl capitalize font-bold">
